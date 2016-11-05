@@ -1,0 +1,9 @@
+[package]
+name = "roll"
+version = "0.1.0"
+authors = ["Kyle Clemens <me@kyleclemens.com>"]
+
+[dependencies]
+rand = "0.3"
+error-chain = "0.5"
+clippy = "0.0.97"
