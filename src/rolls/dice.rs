@@ -2,7 +2,7 @@ use std::convert::TryFrom;
 use super::super::errors::*;
 
 /// A number of dice, all with the same amount of faces.
-#[derive(Debug, PartialEq, Hash)]
+#[derive(Debug, Eq, PartialEq, Hash)]
 pub struct Dice {
   /// The amount of dice in this group.
   pub amount: usize,
