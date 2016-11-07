@@ -29,6 +29,9 @@ impl<T> TryFrom<T> for Dice
       parts[0].parse::<usize>().chain_err(|| "could not parse dice amount")?
     };
     let faces = parts[1].parse::<usize>().chain_err(|| "could not parse dice faces")?;
+    if faces == 0 {
+      return Err("faces cannot be 0".into());
+    }
     Ok(Dice {
       amount: amount,
       faces: faces

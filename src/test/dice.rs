@@ -48,3 +48,9 @@ fn test_uppercase() {
   };
   assert_eq!(expect, dice_string.try_into().unwrap());
 }
+
+#[test]
+#[should_panic]
+fn test_zero_faces() {
+  Dice::try_from("1d0").unwrap();
+}
